@@ -1,2 +1,2 @@
-Copyright &copy;2142 
+Copyright &copy;2142
 <a href="http://www.infiniteskills.com">Infinite Skills</a>
