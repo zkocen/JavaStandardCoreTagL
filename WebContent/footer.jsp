@@ -1,2 +1,2 @@
-Copyright &copy;2142
-<a href="http://www.infiniteskills.com">Infinite Skills</a>
+This site is owned by 
+<a href="https://www.google.co.uk/#q=zan+kocen">Zan</a>
