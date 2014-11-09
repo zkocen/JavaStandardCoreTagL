@@ -1,2 +1,2 @@
 This site is owned by 
-<a href="https://www.google.co.uk/#q=zan+kocen">Zan</a>
+<a href="${param.websiteLink}">Zan</a>&copy;${param.copyrightYear}

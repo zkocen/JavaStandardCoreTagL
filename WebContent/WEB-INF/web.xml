@@ -8,6 +8,14 @@
 		<listener-class>com.worldmanager.dbhelpers.DBManagerSetup</listener-class>
 	</listener>
 	<context-param>
+		<param-name>copyright</param-name>
+		<param-value>2020</param-value>
+	</context-param>
+	<context-param>
+		<param-name>weblink</param-name>
+		<param-value>https://www.google.co.uk/#q=zan+kocen</param-value>
+	</context-param>
+	<context-param>
 		<param-name>dbuserid</param-name>
 		<param-value>root</param-value>
 	</context-param>

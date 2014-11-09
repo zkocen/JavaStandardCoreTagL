@@ -8,13 +8,12 @@
 <title>Welcome to the World Manager</title>
 </head>
 <body>
-	<!--<jsp:include page="header.jsp" />-->
 	<c:import url="header.jsp" />
 
 	<table style="width: 100%;">
 		<tr>
 			<td style="width: 25%; height: 80%;" valign="top">
-				<!--<jsp:include page="navbar.jsp" />--> <c:import url="navbar.jsp" />
+				<c:import url="navbar.jsp" />
 			</td>
 			<td style="width: 75%; height: 80%;">
 				<h1>Welcome to the World manager web system</h1> <%
@@ -32,7 +31,9 @@
 			</td>
 		</tr>
 	</table>
-	<!--<jsp:include page="footer.jsp" />-->
-	<c:import url="footer.jsp" />
+	<c:import url="footer.jsp" >
+		<c:param name="copyrightYear" value="${initParam.copyright}" />
+		<c:param name="websiteLink" value="${initParam.weblink}" />
+	</c:import>
 </body>
 </html>
