@@ -4,8 +4,8 @@
     import="com.worldmanager.dbhelpers.*
           , com.worldmanager.dbmodels.*
           , com.worldmanager.models.*
-          , java.sql.*"
-    %>
+          , java.sql.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,14 +22,17 @@
 	%>
 	<% 
 		if (session.getAttribute("authorized_user") == null) {
-			RequestDispatcher rd = request.getRequestDispatcher("login.jsp?dest=listCities");
-			rd.forward(request, response);
+			%>
+			<c:redirect url="login.jsp?dest=listCities" />
+			<% 
+			
 		} else {
 			wu = (WebUser)session.getAttribute("authorized_user");
 			Integer authLevel = (Integer)wu.getAuthLevel();
 			if (authLevel < 1) {
-				RequestDispatcher rd = request.getRequestDispatcher("login.jsp?dest=listCities");
-				rd.forward(request, response);
+				%>
+				<c:redirect url="login.jsp?dest=listCities" />
+				<%
 			}
 		}
 		if (wu.getUserId()!= null && !wu.getUserId().equals("")) {
@@ -42,7 +45,8 @@
 	<%
 		if (uid != null && !uid.equals("")) {
 			%>
-				<h1>Welcome back <%=uid %></h1>
+				<h1><c:out value="Welcome Back" />&nbsp;<%= uid %></h1>
+				<h1><c:out value="Welcome Back ${sessionScope.authorized_user.userId}" /></h1>
 			<% 
 		}
 	%>
@@ -93,6 +97,6 @@
 			</td>
 		</tr>
 	</table>
-	<jsp:include page="footer.jsp" />
+	<c:import url="footer.jsp" />
 </body>
 </html>
