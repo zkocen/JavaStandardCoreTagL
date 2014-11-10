@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class InvalidateSessionAndRemoveCookies
  */
-@WebServlet("/InvalidateSessionAndRemoveCookies")
+@WebServlet("/invalidatesessionandremovecookies.do")
 public class InvalidateSessionAndRemoveCookies extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

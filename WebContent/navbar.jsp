@@ -8,5 +8,5 @@
 <br>
 <a href="signout.do">Sign Out</a>
 <br>
-<a href="ClearSessionsAndCookies.jsp">Clear All User Data</a>
+<a href="invalidatesessionandremovecookies.do">Clear All User Data</a>
 <br>

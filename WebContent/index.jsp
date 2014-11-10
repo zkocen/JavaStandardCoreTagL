@@ -16,18 +16,14 @@
 				<c:import url="navbar.jsp" />
 			</td>
 			<td style="width: 75%; height: 80%;">
-				<h1>Welcome to the World manager web system</h1> <%
-					if (session.getAttribute("authorized_user") != null)
-					{
-						%>
-				<h2>Welcome back ${sessionScope.authorized_user.userId}</h2> <%
-					}
-					else
-					{
-						%>
-				<h2>Returning users login</h2> <a href="login.jsp">here</a> <%
-					}
-				%>
+				<h1><c:out value="Welcome to the world Manager Web System" /></h1>
+				<c:if test="${sessionScope.authorized_user ne null}" >
+					<h2><c:out value="${sessionScope.authorized_user.userId}" /></h2>
+				</c:if>
+				<c:if test="${sessionScope.authorized_user eq null}">
+					<h2><c:out value="Returning users login" /></h2>
+					<a href="login.jsp">here</a>
+				</c:if>
 			</td>
 		</tr>
 	</table>
